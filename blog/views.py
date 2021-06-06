@@ -13,3 +13,5 @@ def post(request,pk):
             form.save()
             return HttpResponseRedirect(request.path)
     return render(request, "blog/post.html", {"post":post, "form":form})
+def blog(request):
+    return render(request, 'blog/bloguncle.html')
